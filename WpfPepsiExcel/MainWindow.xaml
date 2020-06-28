@@ -1,0 +1,117 @@
+﻿<Window x:Class="WpfPepsiExcel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPepsiExcel" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+ Title="Alfa 0.1" Height="300" Width="600" Background="Brown">
+
+
+
+    <Grid>
+
+        <Grid>
+            <TabControl>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <!--<Image Source="/WpfTutorialSamples;component/Images/bullet_blue.png" />-->
+                            <TextBlock Text="Электричетство" Foreground="DarkOrange" FontSize="16 " FontWeight="Bold" />
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid Background="AliceBlue">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="42*" />
+                            <ColumnDefinition Width="170*" />
+                            <ColumnDefinition Width="85*" />
+                            <ColumnDefinition Width="170*" />
+                            <ColumnDefinition Width="42*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition Height="28" />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <!--<Button Grid.Column="1" Width="150" Height="22" HorizontalAlignment="Right" Click="Button_Click">выбор папки шаблона</Button>-->
+                        <!--<TextBlock  Text="{Binding dialog.FileName }"  Grid.Column="3" VerticalAlignment="Center" />-->
+                        <TextBlock Text="Дата и время начала выборки"
+                                   VerticalAlignment="Center" TextAlignment="Center" Grid.Column="1"  Grid.Row="1" />
+                        <xctk:DateTimePicker x:Name="dateTimePicker1" 
+                            
+                                             Grid.Column="1" Grid.Row="2" />
+
+                        <TextBlock Text="Дата и время конца выборки"
+                                   VerticalAlignment="Center" TextAlignment="Center" Grid.Column="3" Grid.Row="1" />
+                        <xctk:DateTimePicker x:Name="dateTimePicker2" Grid.Column="3" Grid.Row="2" />
+
+                        <TextBlock Text="Создать отчет типа ВВЛ" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B1" Grid.Row="4" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Click" />
+
+                        <TextBlock Text="Создать отчет типа КУП" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B2" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B2_Click" />
+
+                        <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B3" Grid.Row="6" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" />
+                    </Grid>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <!--<Image Source="/WpfTutorialSamples;component/Images/bullet_red.png" />-->
+                            <TextBlock Text="Вода" Foreground="Blue" FontSize="16 " FontWeight="Bold" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <!--<Image Source="/WpfTutorialSamples;component/Images/bullet_green.png" />-->
+                            <TextBlock Text="и т д" Foreground="Green" FontSize="16 " FontWeight="Bold" />
+                        </StackPanel>
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="0.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <!--<TextBlock Text="Дата и время начала выборки" Grid.Row="1" Grid.Column="1" />
+                        <DatePicker Name="datePicker5" SelectedDateChanged="datePicker5_SelectedDateChanged" Grid.Column="1" Grid.Row="2" IsDropDownOpen="True" SelectedDateFormat="Short" />
+                        <xctk:TimePicker x:Name="timePicker5" Grid.Column="1" Grid.Row="3" TextAlignment="Center" />
+
+                        <TextBlock Text="Дата и время конца выборки" Grid.Row="1" Grid.Column="3" />
+                        <DatePicker Name="datePicker6" Grid.Column="3" Grid.Row="2" IsDropDownOpen="True" SelectedDateFormat="Short" />
+                        <xctk:TimePicker x:Name="timePicker6" Grid.Column="3" Grid.Row="3" TextAlignment="Center" />-->
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>

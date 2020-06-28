@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="3.8.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.10.3" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\ExcelText\ExcelText\obj\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>true</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+
+</Project>
