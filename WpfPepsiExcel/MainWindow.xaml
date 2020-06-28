@@ -37,8 +37,6 @@
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <!--<Button Grid.Column="1" Width="150" Height="22" HorizontalAlignment="Right" Click="Button_Click">выбор папки шаблона</Button>-->
-                        <!--<TextBlock  Text="{Binding dialog.FileName }"  Grid.Column="3" VerticalAlignment="Center" />-->
                         <TextBlock Text="Дата и время начала выборки"
                                    VerticalAlignment="Center" TextAlignment="Center" Grid.Column="1"  Grid.Row="1" />
                         <xctk:DateTimePicker x:Name="dateTimePicker1" 
@@ -75,6 +73,51 @@
                             <TextBlock Text="Вода" Foreground="Blue" FontSize="16 " FontWeight="Bold" />
                         </StackPanel>
                     </TabItem.Header>
+                    <Grid Background="AliceBlue">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="42*" />
+                            <ColumnDefinition Width="170*" />
+                            <ColumnDefinition Width="85*" />
+                            <ColumnDefinition Width="170*" />
+                            <ColumnDefinition Width="42*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition Height="28" />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Дата и время начала выборки"
+                                   VerticalAlignment="Center" TextAlignment="Center" Grid.Column="1"  Grid.Row="1" />
+                        <xctk:DateTimePicker x:Name="dateTimePicker3" 
+                            
+                                             Grid.Column="1" Grid.Row="2" />
+
+                        <TextBlock Text="Дата и время конца выборки"
+                                   VerticalAlignment="Center" TextAlignment="Center" Grid.Column="3" Grid.Row="1" />
+                        <xctk:DateTimePicker x:Name="dateTimePicker4" Grid.Column="3" Grid.Row="2" />
+
+                        <TextBlock Text="Создать отчет типа ВВЛ" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B11" Grid.Row="4" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B11_Click" />
+
+                        <TextBlock Text="Создать отчет типа КУП" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B12" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B12_Click" />
+
+                        <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B13" Grid.Row="6" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" />
+                    </Grid>
                 </TabItem>
                 <TabItem>
                     <TabItem.Header>

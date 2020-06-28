@@ -6,7 +6,7 @@ using System.Text;
 
 namespace WpfPepsiExcel
 {
-    class MongoNode
+    class MongoNodeElectricity
     {
         [BsonId]
         public ObjectId _id { get; set; }
@@ -22,5 +22,15 @@ namespace WpfPepsiExcel
         public float WQ_oup { get; set; }
         [BsonRepresentation(BsonType.Int64, AllowTruncation = true)]
         public float WQ { get; set; }
+    }
+
+    class MongoNodeWater
+    {
+        [BsonId]
+        public ObjectId _id { get; set; }
+        public int ID { get; set; }
+        public string name { get; set; }
+        public float value { get; set; }
+        public DateTime dateTime { get; set; }
     }
 }

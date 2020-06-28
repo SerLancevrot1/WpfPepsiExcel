@@ -8,14 +8,34 @@ namespace WpfPepsiExcel
    static class MongoConnect
     {
 
-        internal static IMongoDatabase Con()
+        internal static IMongoDatabase ConElectr()
         {
-            IMongoCollection<MongoNode> Parametrs;
+            IMongoCollection<MongoNodeElectricity> Parametrs;
             string connectionString = "mongodb://172.17.0.8:27017";
             MongoClient client = new MongoClient(connectionString);
 
            IMongoDatabase database = client.GetDatabase("Test");
            return  database;       
+        }
+
+        internal static IMongoDatabase ConWater()
+        {
+            IMongoCollection<MongoNodeElectricity> Parametrs;
+            string connectionString = "mongodb://172.17.0.8:27017";
+            MongoClient client = new MongoClient(connectionString);
+
+            IMongoDatabase database = client.GetDatabase("Water");
+            return database;
+        }
+
+        internal static IMongoDatabase ConGas()
+        {
+            IMongoCollection<MongoNodeElectricity> Parametrs;
+            string connectionString = "mongodb://172.17.0.8:27017";
+            MongoClient client = new MongoClient(connectionString);
+
+            IMongoDatabase database = client.GetDatabase("Test");
+            return database;
         }
     }
 }
