@@ -19,13 +19,10 @@ namespace WpfPepsiExcel
             InitializeComponent();
         }
 
-        //кнопка создания отчета
-        private void B1_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
+        //кнопки для создания отчетов
 
-        private async void B2_Click(object sender, RoutedEventArgs e)
+
+        private async void B1_Electricity_Click(object sender, RoutedEventArgs e)
         {
 
             if (dateTimePicker1.Value == null || dateTimePicker2.Value == null)
@@ -34,7 +31,7 @@ namespace WpfPepsiExcel
                 return;
             }
 
-            Butt2 butt = new Butt2();
+            B1_Elecricity butt = new B1_Elecricity();
             DateTime dateTime1 = dateTimePicker1.Value.Value;
             
             DateTime dateTime2 = dateTimePicker2.Value.Value;
@@ -43,7 +40,7 @@ namespace WpfPepsiExcel
           
         }
 
-        private async void B11_Click(object sender, RoutedEventArgs e)
+        private async void B1_Water_Click(object sender, RoutedEventArgs e)
         {
             if (dateTimePicker3.Value == null || dateTimePicker4.Value == null)
             {
@@ -51,14 +48,14 @@ namespace WpfPepsiExcel
                 return;
             }
 
-            Butt11 butt = new Butt11();
+            B1_Water butt = new B1_Water();
             DateTime dateTime3 = dateTimePicker3.Value.Value;
             DateTime dateTime4 = dateTimePicker4.Value.Value;
 
             await Task.Run(() => butt.method(dateTime3, dateTime4));
         }
 
-        private async void B12_Click(object sender, RoutedEventArgs e)
+        private async void B2_Water_Click(object sender, RoutedEventArgs e)
         {
             if (dateTimePicker3.Value == null || dateTimePicker4.Value == null)
             {
@@ -66,7 +63,7 @@ namespace WpfPepsiExcel
                 return;
             }
 
-            Butt2 butt = new Butt2();
+            B1_Elecricity butt = new B1_Elecricity();
             DateTime dateTime1 = dateTimePicker1.Value.Value;
 
             DateTime dateTime2 = dateTimePicker2.Value.Value;

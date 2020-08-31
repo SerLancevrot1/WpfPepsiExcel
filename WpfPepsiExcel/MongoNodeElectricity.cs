@@ -6,6 +6,7 @@ using System.Text;
 
 namespace WpfPepsiExcel
 {
+    // Классы для получения данных из ДБ
     class MongoNodeElectricity
     {
         [BsonId]
@@ -25,6 +26,16 @@ namespace WpfPepsiExcel
     }
 
     class MongoNodeWater
+    {
+        [BsonId]
+        public ObjectId _id { get; set; }
+        public int ID { get; set; }
+        public string name { get; set; }
+        public float value { get; set; }
+        public DateTime dateTime { get; set; }
+    }
+
+    class MongoNodeGas
     {
         [BsonId]
         public ObjectId _id { get; set; }

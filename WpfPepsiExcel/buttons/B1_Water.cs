@@ -9,33 +9,17 @@ using System.IO;
 
 namespace WpfPepsiExcel.buttons
 {
-    class Butt11
+    class B1_Water
     {
         public void method(DateTime dateTimePicker1, DateTime dateTimePicker2)
         {
-
-            //using (var md5 = MD5.Create())
-            //{
-            //    using (var stream = File.OpenRead(@"C:\Users\" +
-            //    Environment.UserName + @"\Templates\ReportsMain.xlsm"))
-            //    {
-            //        var hash = md5.ComputeHash(stream);
-            //        string qwer = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
-
-
-            //    }
-            //}
 
             Excel.Application app = new Excel.Application();
             Excel.Workbook wb = app.Workbooks.Open(@"C:\Users\" +
                 Environment.UserName + @"\Templates\Water11.xlsx");
 
-
-
-
             Excel.Worksheet ws1 = (Excel.Worksheet)wb.Worksheets[1];
             
-
             ws1.Cells[2, 6] = dateTimePicker1;
             ws1.Cells[2, 7] = dateTimePicker2;
 
@@ -45,7 +29,6 @@ namespace WpfPepsiExcel.buttons
             int month2 = dateTimePicker2.Month;
             string date1 = new DateTime(year, month, 1).ToShortDateString();
             string date2 = new DateTime(year2, month2, 1).ToShortDateString();
-
 
             IMongoDatabase database = MongoConnect.ConWater(); //подключение к дб
 

@@ -7,7 +7,7 @@ namespace WpfPepsiExcel
 {
    static class MongoConnect
     {
-
+        // подключение к ДБ
         internal static IMongoDatabase ConElectr()
         {
             IMongoCollection<MongoNodeElectricity> Parametrs;

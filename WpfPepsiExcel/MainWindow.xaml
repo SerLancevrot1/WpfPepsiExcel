@@ -51,13 +51,13 @@
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B1" Grid.Row="4" Grid.Column=" 3" Width="85" Height="22"
-                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Click" />
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Electricity_Click" />
 
                         <TextBlock Text="Создать отчет типа КУП" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B2" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
-                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B2_Click" />
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Electricity_Click" />
 
                         <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -70,7 +70,7 @@
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal">
                             <!--<Image Source="/WpfTutorialSamples;component/Images/bullet_red.png" />-->
-                            <TextBlock Text="Вода" Foreground="Blue" FontSize="16 " FontWeight="Bold" />
+                            <TextBlock Text="Вода" Margin="50, 0" Foreground="Blue" FontSize="16 " FontWeight="Bold" />
                         </StackPanel>
                     </TabItem.Header>
                     <Grid Background="AliceBlue">
@@ -104,13 +104,13 @@
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B11" Grid.Row="4" Grid.Column=" 3" Width="85" Height="22"
-                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B11_Click" />
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Water_Click" />
 
                         <TextBlock Text="Создать отчет типа КУП" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B12" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
-                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B12_Click" />
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B2_Water_Click" />
 
                         <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -123,7 +123,7 @@
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal">
                             <!--<Image Source="/WpfTutorialSamples;component/Images/bullet_green.png" />-->
-                            <TextBlock Text="и т д" Foreground="Green" FontSize="16 " FontWeight="Bold" />
+                            <TextBlock Text="Газ" Margin="50, 0" Foreground="Green" FontSize="16 " FontWeight="Bold" />
                         </StackPanel>
                     </TabItem.Header>
                     <Grid>

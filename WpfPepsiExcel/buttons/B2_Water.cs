@@ -9,7 +9,7 @@ using System.IO;
 
 namespace WpfPepsiExcel.buttons
 {
-   public class Butt2
+    class B2_Water
     {
         public void method(DateTime dateTimePicker1, DateTime dateTimePicker2)
         {
@@ -30,9 +30,6 @@ namespace WpfPepsiExcel.buttons
             Excel.Workbook wb = app.Workbooks.Open(@"C:\Users\" +
                 Environment.UserName + @"\Templates\Template3.xlsx");
 
-
-
-
             Excel.Worksheet ws1 = (Excel.Worksheet)wb.Worksheets[1];
             Excel.Worksheet ws2 = (Excel.Worksheet)wb.Worksheets[2];  //Worksheets[1]; "Счетчики Opr"
 
@@ -46,11 +43,10 @@ namespace WpfPepsiExcel.buttons
             string date1 = new DateTime(year, month, 1).ToShortDateString();
             string date2 = new DateTime(year2, month2, 1).ToShortDateString();
 
-
-            IMongoDatabase database = MongoConnect.ConElectr(); //подключение к дб
+            IMongoDatabase database = MongoConnect.ConGas(); //подключение к дб
 
             DateTime fixedDTP1 = dateTimePicker1;
-            DateTime fixedDTP2 = dateTimePicker2 ;
+            DateTime fixedDTP2 = dateTimePicker2;
 
             FilterDefinition<MongoNodeElectricity> MainFilter1 =
                  Builders<MongoNodeElectricity>.Filter.Gte("dateTime", fixedDTP1);
@@ -69,8 +65,8 @@ namespace WpfPepsiExcel.buttons
 
                 foreach (var j in list1)//цикл столбцов
                 {
-                    ws1.Cells[i + 5, 2] = j.wP_in/1000;
-                    ws1.Cells[i + 5, 3] = j.WP_out/1000;
+                    ws1.Cells[i + 5, 2] = j.wP_in / 1000;
+                    ws1.Cells[i + 5, 3] = j.WP_out / 1000;
                     ws1.Cells[i + 5, 4] = j.WQ_in / 1000;// заполнение листов
                     ws1.Cells[i + 5, 5] = j.WQ_oup / 1000;
                     ws1.Cells[i + 5, 6] = j.WQ / 1000;
