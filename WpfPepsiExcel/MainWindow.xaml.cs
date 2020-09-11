@@ -88,5 +88,21 @@ namespace WpfPepsiExcel
 
             await Task.Run(() => butt.excelWorker(dateTime1, dateTime2));
         }
+
+        private async void B2_Gas_Click(object sender, RoutedEventArgs e)
+        {
+            if (dateTimePicker5.Value == null || dateTimePicker6.Value == null)
+            {
+                MessageBox.Show("Введите число");
+                return;
+            }
+
+            B2_Gas butt = new B2_Gas();
+            DateTime dateTime1 = dateTimePicker5.Value.Value;
+
+            DateTime dateTime2 = dateTimePicker6.Value.Value;
+
+            await Task.Run(() => butt.excelWorker(dateTime1, dateTime2));
+        }
     }
 }

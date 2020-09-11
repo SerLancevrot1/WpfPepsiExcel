@@ -159,11 +159,11 @@
                         <Button x:Name="B1_Gas" Grid.Row="4" Grid.Column=" 3" Width="85" Height="22"
                                VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Gas_Click" />
 
-                        <TextBlock Text="Создать отчет типа КУП" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                        <TextBlock Text="Создать отчет состояния линий" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B2_Gas" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
-                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать"  />
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B2_Gas_Click"  />
 
                         <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
