@@ -11,7 +11,7 @@ namespace WpfPepsiExcel.buttons
 {
     class B2_Water
     {
-        public void method(DateTime dateTimePicker1, DateTime dateTimePicker2)
+        public void excelWorker(DateTime dateTimePicker1, DateTime dateTimePicker2)
         {
 
             using (var md5 = MD5.Create())
@@ -48,20 +48,20 @@ namespace WpfPepsiExcel.buttons
             DateTime fixedDTP1 = dateTimePicker1;
             DateTime fixedDTP2 = dateTimePicker2;
 
-            FilterDefinition<MongoNodeElectricity> MainFilter1 =
-                 Builders<MongoNodeElectricity>.Filter.Gte("dateTime", fixedDTP1);
-            List<MongoNodeElectricity> mainList1 =
-                database.GetCollection<MongoNodeElectricity>(date1).Find(MainFilter1).Limit(80).ToList();
+            FilterDefinition<MongoNode> MainFilter1 =
+                 Builders<MongoNode>.Filter.Gte("dateTime", fixedDTP1);
+            List<MongoNode> mainList1 =
+                database.GetCollection<MongoNode>(date1).Find(MainFilter1).Limit(80).ToList();
 
-            FilterDefinition<MongoNodeElectricity> MainFilter2 =
-                Builders<MongoNodeElectricity>.Filter.Gte("dateTime", fixedDTP2);
-            List<MongoNodeElectricity> mainList2 =
-                database.GetCollection<MongoNodeElectricity>(date2).Find(MainFilter2).Limit(80).ToList();
+            FilterDefinition<MongoNode> MainFilter2 =
+                Builders<MongoNode>.Filter.Gte("dateTime", fixedDTP2);
+            List<MongoNode> mainList2 =
+                database.GetCollection<MongoNode>(date2).Find(MainFilter2).Limit(80).ToList();
 
             for (int i = 1; i < 64; i++)
             {
                 // фильтрую листы с лямбда выражениями
-                List<MongoNodeElectricity> list1 = mainList1.Where(x => x.ID == i).ToList();
+                List<MongoNode> list1 = mainList1.Where(x => x.ID == i).ToList();
 
                 foreach (var j in list1)//цикл столбцов
                 {
@@ -73,7 +73,7 @@ namespace WpfPepsiExcel.buttons
                     break;
                 }
 
-                List<MongoNodeElectricity> list2 = mainList2.Where(x => x.ID == i).ToList();
+                List<MongoNode> list2 = mainList2.Where(x => x.ID == i).ToList();
                 foreach (var j in list2)
                 {
                     ws2.Cells[i + 5, 2] = j.wP_in / 1000;

@@ -7,7 +7,7 @@ using System.Text;
 namespace WpfPepsiExcel
 {
     // Классы для получения данных из ДБ
-    class MongoNodeElectricity
+    class MongoNode
     {
         [BsonId]
         public ObjectId _id { get; set; }
@@ -43,5 +43,8 @@ namespace WpfPepsiExcel
         public string name { get; set; }
         public float value { get; set; }
         public DateTime dateTime { get; set; }
+        public bool IsWork { get; set; }
+
+
     }
 }

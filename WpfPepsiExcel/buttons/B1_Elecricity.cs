@@ -11,9 +11,10 @@ namespace WpfPepsiExcel.buttons
 {
    public class B1_Elecricity
     {
-        public void method(DateTime dateTimePicker1, DateTime dateTimePicker2)
+        public void excelWorker(DateTime dateTimePicker1, DateTime dateTimePicker2)
         {
 
+            // подгружаем шаблон
             using (var md5 = MD5.Create())
             {
                 using (var stream = File.OpenRead(@"C:\Users\" +
@@ -26,13 +27,16 @@ namespace WpfPepsiExcel.buttons
                 }
             }
 
+            // открываем шаблон
             Excel.Application app = new Excel.Application();
             Excel.Workbook wb = app.Workbooks.Open(@"C:\Users\" +
                 Environment.UserName + @"\Templates\Template3.xlsx");
 
+            // 2 рабочих листа. Значения на одну дату и на другую
             Excel.Worksheet ws1 = (Excel.Worksheet)wb.Worksheets[1];
             Excel.Worksheet ws2 = (Excel.Worksheet)wb.Worksheets[2];  //Worksheets[1]; "Счетчики Opr"
 
+            // пишем даты наверх
             ws1.Cells[2, 2] = dateTimePicker1;
             ws2.Cells[2, 2] = dateTimePicker2;
 
@@ -46,23 +50,25 @@ namespace WpfPepsiExcel.buttons
 
             IMongoDatabase database = MongoConnect.ConElectr(); //подключение к дб
 
+            // преобразование дат для формата БД
             DateTime fixedDTP1 = dateTimePicker1;
             DateTime fixedDTP2 = dateTimePicker2 ;
 
-            FilterDefinition<MongoNodeElectricity> MainFilter1 =
-                 Builders<MongoNodeElectricity>.Filter.Gte("dateTime", fixedDTP1);
-            List<MongoNodeElectricity> mainList1 =
-                database.GetCollection<MongoNodeElectricity>(date1).Find(MainFilter1).Limit(80).ToList();
+            // запрос к бд. Запрос берет первые 120 значений начиная с времени календаря и записывает в mainList1
+            FilterDefinition<MongoNode> MainFilter1 =
+                 Builders<MongoNode>.Filter.Gte("dateTime", fixedDTP1);
+            List<MongoNode> mainList1 =
+                database.GetCollection<MongoNode>(date1).Find(MainFilter1).Limit(120).ToList();
 
-            FilterDefinition<MongoNodeElectricity> MainFilter2 =
-                Builders<MongoNodeElectricity>.Filter.Gte("dateTime", fixedDTP2);
-            List<MongoNodeElectricity> mainList2 =
-                database.GetCollection<MongoNodeElectricity>(date2).Find(MainFilter2).Limit(80).ToList();
+            FilterDefinition<MongoNode> MainFilter2 =
+                Builders<MongoNode>.Filter.Gte("dateTime", fixedDTP2);
+            List<MongoNode> mainList2 =
+                database.GetCollection<MongoNode>(date2).Find(MainFilter2).Limit(120).ToList();
 
             for (int i = 1; i < 64; i++)
             {
                 // фильтрую листы с лямбда выражениями
-                List<MongoNodeElectricity> list1 = mainList1.Where(x => x.ID == i).ToList();
+                List<MongoNode> list1 = mainList1.Where(x => x.ID == i).ToList();
 
                 foreach (var j in list1)//цикл столбцов
                 {
@@ -74,7 +80,7 @@ namespace WpfPepsiExcel.buttons
                     break;
                 }
 
-                List<MongoNodeElectricity> list2 = mainList2.Where(x => x.ID == i).ToList();
+                List<MongoNode> list2 = mainList2.Where(x => x.ID == i).ToList();
                 foreach (var j in list2)
                 {
                     ws2.Cells[i + 5, 2] = j.wP_in / 1000;
@@ -89,6 +95,7 @@ namespace WpfPepsiExcel.buttons
             //дата для отчета
             string dateTime = DateTime.Now.ToShortDateString();
 
+            // сохранение отчета
             string mainPath = Path.FirstPath();
             string xls = ".xls";
             string fileName = "QWERT__" + dateTime + xls;

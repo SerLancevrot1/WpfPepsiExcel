@@ -126,32 +126,50 @@
                             <TextBlock Text="Газ" Margin="50, 0" Foreground="Green" FontSize="16 " FontWeight="Bold" />
                         </StackPanel>
                     </TabItem.Header>
-                    <Grid>
+                    <Grid Background="AliceBlue">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.5*" />
-                            <ColumnDefinition Width="2*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="2*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="42*" />
+                            <ColumnDefinition Width="170*" />
+                            <ColumnDefinition Width="85*" />
+                            <ColumnDefinition Width="170*" />
+                            <ColumnDefinition Width="42*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
+                            <RowDefinition Height="28" />
                             <RowDefinition />
                             <RowDefinition />
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <!--<TextBlock Text="Дата и время начала выборки" Grid.Row="1" Grid.Column="1" />
-                        <DatePicker Name="datePicker5" SelectedDateChanged="datePicker5_SelectedDateChanged" Grid.Column="1" Grid.Row="2" IsDropDownOpen="True" SelectedDateFormat="Short" />
-                        <xctk:TimePicker x:Name="timePicker5" Grid.Column="1" Grid.Row="3" TextAlignment="Center" />
+                        <TextBlock Text="Дата и время начала выборки"
+                                   VerticalAlignment="Center" TextAlignment="Center" Grid.Column="1"  Grid.Row="1" />
+                        <xctk:DateTimePicker x:Name="dateTimePicker5" 
+                            
+                                             Grid.Column="1" Grid.Row="2" />
 
-                        <TextBlock Text="Дата и время конца выборки" Grid.Row="1" Grid.Column="3" />
-                        <DatePicker Name="datePicker6" Grid.Column="3" Grid.Row="2" IsDropDownOpen="True" SelectedDateFormat="Short" />
-                        <xctk:TimePicker x:Name="timePicker6" Grid.Column="3" Grid.Row="3" TextAlignment="Center" />-->
+                        <TextBlock Text="Дата и время конца выборки"
+                                   VerticalAlignment="Center" TextAlignment="Center" Grid.Column="3" Grid.Row="1" />
+                        <xctk:DateTimePicker x:Name="dateTimePicker6" Grid.Column="3" Grid.Row="2" />
+
+                        <TextBlock Text="Создать отчет GFM1-4" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B1_Gas" Grid.Row="4" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Gas_Click" />
+
+                        <TextBlock Text="Создать отчет типа КУП" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B2_Gas" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать"  />
+
+                        <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                        <Button x:Name="B3_Gas" Grid.Row="6" Grid.Column=" 3" Width="85" Height="22"
+                               VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" />
                     </Grid>
                 </TabItem>
             </TabControl>
