@@ -63,7 +63,7 @@ namespace WpfPepsiExcel.buttons
                             break;
 
                         case 4:
-                            ws1.Cells[jh + 1, 1] = j.dateTime;
+                            ws1.Cells[jh + 1, 1] = j.dateTime.AddHours(3);
                             ws1.Cells[jh + 1, 2] = j.value;
                             break;
                         case 5:

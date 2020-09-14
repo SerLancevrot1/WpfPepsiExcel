@@ -37,6 +37,12 @@ namespace WpfPepsiExcel
             
             DateTime dateTime2 = dateTimePicker2.Value.Value;
 
+            if (dateTime1 > dateTime2)
+            {
+                MessageBox.Show("Дата введена некорректно");
+                return;
+            }
+
             //ассинхронно запускаем метод кнопки 
             await Task.Run(() => butt.excelWorker(dateTime1, dateTime2));
           
@@ -51,10 +57,16 @@ namespace WpfPepsiExcel
             }
 
             B1_Water butt = new B1_Water();
-            DateTime dateTime3 = dateTimePicker3.Value.Value;
-            DateTime dateTime4 = dateTimePicker4.Value.Value;
+            DateTime dateTime1 = dateTimePicker3.Value.Value;
+            DateTime dateTime2 = dateTimePicker4.Value.Value;
 
-            await Task.Run(() => butt.excelWorker(dateTime3, dateTime4));
+            if (dateTime1 > dateTime2)
+            {
+                MessageBox.Show("Дата введена некорректно");
+                return;
+            }
+
+            await Task.Run(() => butt.excelWorker(dateTime1, dateTime2));
         }
 
         private async void B2_Water_Click(object sender, RoutedEventArgs e)
@@ -69,6 +81,12 @@ namespace WpfPepsiExcel
             DateTime dateTime1 = dateTimePicker1.Value.Value;
 
             DateTime dateTime2 = dateTimePicker2.Value.Value;
+
+            if (dateTime1 > dateTime2)
+            {
+                MessageBox.Show("Дата введена некорректно");
+                return;
+            }
 
             await Task.Run(() => butt.excelWorker(dateTime1, dateTime2));
         }
@@ -86,6 +104,12 @@ namespace WpfPepsiExcel
 
             DateTime dateTime2 = dateTimePicker6.Value.Value;
 
+            if (dateTime1 > dateTime2)
+            {
+                MessageBox.Show("Дата введена некорректно");
+                return;
+            }
+
             await Task.Run(() => butt.excelWorker(dateTime1, dateTime2));
         }
 
@@ -98,9 +122,16 @@ namespace WpfPepsiExcel
             }
 
             B2_Gas butt = new B2_Gas();
+
             DateTime dateTime1 = dateTimePicker5.Value.Value;
 
             DateTime dateTime2 = dateTimePicker6.Value.Value;
+
+            if (dateTime1 > dateTime2)
+            {
+                MessageBox.Show("Дата введена некорректно");
+                return;
+            }
 
             await Task.Run(() => butt.excelWorker(dateTime1, dateTime2));
         }

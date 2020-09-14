@@ -47,19 +47,19 @@
                                    VerticalAlignment="Center" TextAlignment="Center" Grid.Column="3" Grid.Row="1" />
                         <xctk:DateTimePicker x:Name="dateTimePicker2" Grid.Column="3" Grid.Row="2" />
 
-                        <TextBlock Text="Создать отчет типа ВВЛ" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+                        <TextBlock Text="Создать общий отчет отчет " Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B1" Grid.Row="4" Grid.Column=" 3" Width="85" Height="22"
                                VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Electricity_Click" />
 
-                        <TextBlock Text="Создать отчет типа КУП" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                        <TextBlock Text="Нет шаблона" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B2" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
                                VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B1_Electricity_Click" />
 
-                        <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
+                        <TextBlock Text="Нет шаблона" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B3" Grid.Row="6" Grid.Column=" 3" Width="85" Height="22"
@@ -112,7 +112,7 @@
                         <Button x:Name="B12" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
                                VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B2_Water_Click" />
 
-                        <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
+                        <TextBlock Text="Нет шаблона" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B13" Grid.Row="6" Grid.Column=" 3" Width="85" Height="22"
@@ -165,7 +165,7 @@
                         <Button x:Name="B2_Gas" Grid.Row="5" Grid.Column=" 3" Width="85" Height="22"
                                VerticalAlignment="Center" HorizontalAlignment="Left" Content="Создать" Click="B2_Gas_Click"  />
 
-                        <TextBlock Text="Создать отчет типа БЛА" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
+                        <TextBlock Text="Нет шаблона" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                         <Button x:Name="B3_Gas" Grid.Row="6" Grid.Column=" 3" Width="85" Height="22"
