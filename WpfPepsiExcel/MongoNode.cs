@@ -43,6 +43,7 @@ namespace WpfPepsiExcel
         public int ID { get; set; }
         public string name { get; set; }
         public float value { get; set; }
+        public int intValue { get; set; }
         [BsonDateTimeOptions]
         public DateTime dateTime { get; set; }
         public bool IsWork { get; set; }

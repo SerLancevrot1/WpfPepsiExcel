@@ -47,7 +47,7 @@ namespace WpfPepsiExcel.buttons
 
 
 
-            for (int i = 1; i < 8; i++)
+            for (int i = 1; i < 10; i++)
             {
                 // фильтрую листы с лямбда выражениями
                 List<MongoNodeGas> list1 = mainList1.Where(x => x.ID == i).ToList();
@@ -60,7 +60,11 @@ namespace WpfPepsiExcel.buttons
                         case 1:
                         case 2:
                         case 3:
-                        case 4:
+                            break;
+
+                        case 8:
+                            ws1.Cells[jh + 1, 1] = j.dateTime.AddHours(3);
+                            ws1.Cells[jh + 1, 2] = j.value;
                             break;
                         case 5:
                             ws1.Cells[jh + 1, 3] = j.IsWork;
@@ -70,10 +74,6 @@ namespace WpfPepsiExcel.buttons
                             break;
                         case 7:
                             ws1.Cells[jh + 1, 5] = j.IsWork;
-                            break;
-                        case 8:
-                            ws1.Cells[jh + 1, 1] = j.dateTime.AddHours(3);
-                            ws1.Cells[jh + 1, 2] = j.value;
                             break;
                     }
                     
