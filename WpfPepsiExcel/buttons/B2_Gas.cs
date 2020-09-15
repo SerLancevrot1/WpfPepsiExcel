@@ -60,11 +60,7 @@ namespace WpfPepsiExcel.buttons
                         case 1:
                         case 2:
                         case 3:
-                            break;
-
                         case 4:
-                            ws1.Cells[jh + 1, 1] = j.dateTime.AddHours(3);
-                            ws1.Cells[jh + 1, 2] = j.value;
                             break;
                         case 5:
                             ws1.Cells[jh + 1, 3] = j.IsWork;
@@ -74,6 +70,10 @@ namespace WpfPepsiExcel.buttons
                             break;
                         case 7:
                             ws1.Cells[jh + 1, 5] = j.IsWork;
+                            break;
+                        case 8:
+                            ws1.Cells[jh + 1, 1] = j.dateTime.AddHours(3);
+                            ws1.Cells[jh + 1, 2] = j.value;
                             break;
                     }
                     
