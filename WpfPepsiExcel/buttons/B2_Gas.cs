@@ -37,14 +37,8 @@ namespace WpfPepsiExcel.buttons
 
             List<MongoNodeGas> mainList1 = database.GetCollection<MongoNodeGas>(date1).Find(
                 x => x.dateTime > fixedDTP1 &
-                x.dateTime < fixedDTP2
-                ).ToList();
-
-            //FilterDefinition<MongoNodeGas> MainFilter1 =
-            //     Builders<MongoNodeGas>.Filter.Gte("dateTime", fixedDTP1);
-            //List<MongoNodeGas> mainList1 =
-            //    database.GetCollection<MongoNodeGas>(date1).Find(MainFilter1).Limit(15).ToList();
-
+                x.dateTime < fixedDTP2)
+                .ToList();
 
 
             for (int i = 1; i < 10; i++)
